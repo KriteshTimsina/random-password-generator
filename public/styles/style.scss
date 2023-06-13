@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  opacity: 1;
+}
+
+#app {
+  background-color: #a3c7d6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .container {
+    padding: 10px;
+    background-color: #3f43ac;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 350px;
+    min-height: 400px;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .display_password {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        input {
+          border: none;
+          outline: none;
+          width: 100%;
+          background: rgba(255, 255, 255, 0.06);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(5.1px);
+          -webkit-backdrop-filter: blur(5.1px);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          color: white;
+          text-indent: 2px;
+          height: 40px;
+        }
+        .clipboard {
+          border: none;
+          cursor: pointer;
+          padding: 0 5px;
+          height: 100%;
+          width: 40px;
+          font-size: 1.5rem;
+          color: black;
+        }
+      }
+
+      .select-box {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .password-length {
+        display: flex;
+        gap:15px;
+        align-items: center;
+        input {
+          background: rgba(255, 255, 255, 0.06);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(5.1px);
+          -webkit-backdrop-filter: blur(5.1px);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          color: white;
+          width: 60px;
+          border: none;
+          padding: 5px;
+          font-size: 1rem;
+        }
+      }
+
+      #generate-pwd {
+        cursor: pointer;
+        width: 100%;
+        background-color: #0e2954;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        font-size: 1.2rem;
+        border-radius: 4px;
+
+        &:hover {
+          scale: 101%;
+        }
+      }
+    }
+  }
+}

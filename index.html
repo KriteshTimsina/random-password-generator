@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/128/2821/2821448.png"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="/public/styles/style.scss" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <h1>Password Generator</h1>
+        <form style="display: flex; flex-direction: column; align-items: start">
+          <div class="display_password">
+            <input id="display" type="text" disabled value="" />
+            <button id="clipboard" class="clipboard">&#128203;</button>
+          </div>
+          <div class="select-box">
+            <label for="lowecase">Include lowercase letters</label>
+            <input type="checkbox" name="lowecase" id="lowercase" checked />
+          </div>
+          <div class="select-box">
+            <label for="uppercase">Include uppercase letters</label>
+            <input type="checkbox" name="uppercase" id="uppercase" />
+          </div>
+          <div class="select-box">
+            <label for="numbers">Include numbers</label>
+            <input type="checkbox" name="numbers" id="numbers" />
+          </div>
+          <div class="select-box">
+            <label for="specials">Include Symbols (_-#$&)</label>
+            <input type="checkbox" name="specials" id="specials" />
+          </div>
+          <div class="password-length">
+            <label for="length">Password length (6-20)</label>
+            <input
+              type="number"
+              name="length"
+              id="length"
+              value="12"
+              max="24"
+              min="6"
+            />
+          </div>
+
+          <button id="generate-pwd">Generate</button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
